@@ -129,28 +129,28 @@ import static org.opencv.imgproc.Imgproc.contourArea;
                     }
                 }
                 //rect3 = Imgproc.boundingRect(questions.get(i));
-//                Log.i("after",rect3.tl()+" ");
+                Log.i("after",rect3.tl()+" ");
                 i++;
 
             }
         }
 
-//        int j=0;i=0;
-//        while(j!=questions.size()){
-//
-//            for(int ctr=0;ctr<questions.size()-1;ctr++){
-//                MatOfPoint ctr1 = questions.get(i);
-//                rect = Imgproc.boundingRect(questions.get(i));
-//                MatOfPoint ctr2 = questions.get(ctr);
-//                rect2 = Imgproc.boundingRect(questions.get(ctr));
-//                if(rect.tl().y<rect2.tl().y){
-//                    questions.set(ctr,ctr1);
-//                    questions.set(i,ctr2);
-//                }
-//            }
-//        i++;
-//        j++;
-//        }
+        int j=0;i=0;
+        while(j!=questions.size()){
+
+            for(int ctr=0;ctr<questions.size()-1;ctr++){
+                MatOfPoint ctr1 = questions.get(i);
+              rect = Imgproc.boundingRect(questions.get(i));
+                MatOfPoint ctr2 = questions.get(ctr);
+                rect2 = Imgproc.boundingRect(questions.get(ctr));
+                if(rect.tl().y<rect2.tl().y){
+                    questions.set(ctr,ctr1);
+                    questions.set(i,ctr2);
+                }
+            }
+        i++;
+       j++;
+        }
 
         Collections.sort(questions, new Comparator<MatOfPoint>() {
 
