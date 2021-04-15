@@ -8,7 +8,7 @@ This is a simple short tutorial on how to use Opencv in java to scan OMR sheets 
  https://docs.opencv.org/2.4/doc/tutorials/introduction/android_binary_package/dev_with_OCV_on_Android.html
  
  
- #  Step 2 :
+ #  Step 2 :  All Imports
  Imports 
  import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.LoaderCallbackInterface;
